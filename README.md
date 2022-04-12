@@ -28,6 +28,33 @@ What is the probability that the final passenger sits in their predetermined sea
 
 The answer is 50% of the time, proven using a Toy MC.
 
+## optiver_prb1.py, optiver_prb2.py, and optiver_prb3.py
+
+The company Optiver presents three puzzles to solve along with their application to be a quantitative researcher with them.
+
+An ant starts at the origin. It can take a random step in any of the cardinal directions every second. It moves 10 cm / s and is looking for food.
+
+### Prob. 1
+
+If the ant starts in the middle of a box that is 40 cm in side length, how long does it take to get to the food on average?
+
+Using a Toy MC to solve this Markov chain problem, the answer is 4.5 seconds.
+
+### Prob. 2
+
+Food is located along a diagonal line passing through (10cm, 0cm) and (0cm, 10cm) points. How long does it take to get to the food on average?
+
+The mean time is infinite. Increasing the `max_step` in the function `ant_walk` returns longer and longer mean time. I am tempted to say that it converges since diffusion should go as 1/r^2. However, numerical solutions suggest the mean does not converge.
+
+### Prob. 3
+
+Food is located outside the barrier:
+
+((x – 2.5cm) / 30cm)^2 + ((y – 2.5cm) / 40cm)^2 < 1
+How long does it take to get to the food on average?
+
+Using a Toy MC to solve this Markov chain problem, the answer is 14 seconds.
+
 ## dots_on_edges.py
 
 Given $n_{dots}$ placed randomly on the $n_{edges}$ of a shape, what is the probability that all $n_{dots}$ are on the same edge?
